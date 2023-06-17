@@ -28,36 +28,23 @@ class _ProgressBtnState extends State<ProgressBtn> {
                 child: SizedBox(
                   width: w / 3,
                   child: LoadingAnimationWidget.halfTriangleDot(
-                    color: const Color.fromARGB(255, 188, 170, 5),
+                    color: Color.fromARGB(255, 253, 191, 77),
                     size: 50,
                   ),
                 ),
               )
             : Container(
-                decoration: const BoxDecoration(
-                    border: Border(
-                      top: BorderSide(color: Color.fromARGB(255, 188, 170, 5)),
-                      left: BorderSide(color: Color.fromARGB(255, 188, 170, 5)),
-                      right:
-                          BorderSide(color: Color.fromARGB(255, 188, 170, 5)),
-                      bottom:
-                          BorderSide(color: Color.fromARGB(255, 188, 170, 5)),
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
                 margin: EdgeInsets.fromLTRB(8, 0, 8, w / 9),
                 child: ElevatedButton(
+                  
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(28.0),
-                    ),
+                    elevation: 0.0,
+                    backgroundColor: Colors.white,
                     // minimumSize: const Size(100, 70),
                   ),
                   child: Text(
                     widget.errorMessage ?? "Try again",
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
+                    style: TextStyle(fontSize: 18, color: Color.fromARGB(255, 86, 99, 118)),
                   ),
                   onPressed: widget.onPressed,
                 ),

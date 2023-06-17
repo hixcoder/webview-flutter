@@ -21,7 +21,7 @@ class PageSplash extends StatefulWidget {
 
 class _PageSplashState extends State<PageSplash> {
   bool visibility = true;
-  String errorMessage = "لا يوجد اتصال بالإنترنت";
+  String errorMessage = "No Internet!";
 
   // for check connection
   ConnectivityResult _connectionStatus = ConnectivityResult.none;
@@ -87,35 +87,39 @@ class _PageSplashState extends State<PageSplash> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            padding: const EdgeInsets.all(80),
-            color: Colors.black,
-            child: Image.asset(
-              'assets/logo.png',
+    return Container(
+      color: Colors.white,
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(80),
+              color: Colors.white,
+              child: Image.asset(
+                'assets/logo.png',
+              ),
             ),
           ),
-        ),
-
-        // this is the Button
-        Container(
-          padding: const EdgeInsets.all(10),
-          alignment: Alignment.bottomCenter,
-          margin: const EdgeInsets.symmetric(vertical: 8),
-          child: ProgressBtn(
-            isVisible: visibility,
-            onPressed: () {
-              setState(() {
-                visibility = true;
-              });
-              goHome();
-            },
-            errorMessage: errorMessage,
+    
+          // this is the Button
+          Container(
+            // padding: const EdgeInsets.all(10),
+            alignment: Alignment.bottomCenter,
+            // margin: const EdgeInsets.symmetric(vertical: 8),
+            color: Colors.white,
+            child: ProgressBtn(
+              isVisible: visibility,
+              onPressed: () {
+                setState(() {
+                  visibility = true;
+                });
+                goHome();
+              },
+              errorMessage: errorMessage,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

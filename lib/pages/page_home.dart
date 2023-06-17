@@ -39,7 +39,7 @@ class _PageHomeState extends State<PageHome> {
           margin:
               EdgeInsets.fromLTRB(0, MediaQuery.of(context).padding.top, 0, 0),
           child: const WebView(
-            initialUrl: "https://amlakiweb.com/home",
+            initialUrl: "https://real-client-wine.vercel.app",
             javascriptMode: JavascriptMode.unrestricted,
           ),
         ),
